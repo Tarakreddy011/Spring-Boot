@@ -28,6 +28,8 @@ public class UserService {
         user.setPassword(userDto.getPassword());
         user.setEmail(userDto.getEmail());
 
+
+
         userInfo.setName(userDto.getName());
         userInfo.setPhone(userDto.getPhone());
         userInfo.setProfilePic(userDto.getProfilePic());

@@ -1,30 +1,25 @@
 package com.example.CRUD.entity;
 
-
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
+@Data
+@Table(name = "user_info")
 public class UserInfo {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long Id ;
+    private Long id;
 
-    private String name  ;
-    private String profilePic ;
-    private String phone ;
-    private String location ;
+    private String name;
+    private String phone;
+    private String profilePic;
+    private String location;
+    private Boolean verificationStatus;
 
-    private VerficationStatus verificationStatus ;
 
     @OneToOne
-    @JoinColumn(name = "user_id", unique = true)
-    User user  ;
-
-
+    @JoinColumn(name = "user_id")
+    private User user;
 }

@@ -1,4 +1,4 @@
-package com.example.CRUD.controller;
+package com.example.CRUD;
 
 
 import com.example.CRUD.entity.User;
@@ -72,7 +72,6 @@ public class Controller {
         user.setPassword("123456");
         user.setUsername("test") ;
 
-        userService.createUser(user);
 
         return user;
     }
